@@ -8,7 +8,9 @@ import NightsStayIcon from '@material-ui/icons/NightsStay';
 function Header() {
     return (
         <Container>
-            <NightsStayIcon />
+            <NightMode>
+                <NightsStayIcon />
+            </NightMode>
             <Main>
                 <SearchContainer>
                     <Search>
@@ -40,10 +42,12 @@ const Container = styled.div`
     border-radius:3%;
     padding-left: 19px;
     box-shadow: inset 0 0 0 0.1px rgb(104 74 104);
+    
 
 
 
 `
+
 
 
 const Main = styled.div`
@@ -69,7 +73,9 @@ const SearchContainer = styled.div`
 
     
 `
-
+ const NightMode = styled.div`
+    cursor: pointer;
+    `
 
 const Search = styled.div`
     box-shadow: inset 0 0 0 2px rgb(104 74 104);
@@ -109,6 +115,7 @@ const UserContainer = styled.div`
 
 const Name = styled.div`
     padding-right: 16px;
+    cursor: pointer;
 
 `
 
@@ -117,7 +124,7 @@ const UserImage = styled.div`
     height: 28px;
     border: 1px solid bisque;
     border-radius: 40%;
-    
+    cursor: pointer;
 
     img {
         width: 100%;
